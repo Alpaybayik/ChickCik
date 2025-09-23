@@ -692,6 +692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec57cd65edf5c1b4ead1c332b8298668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealtManager
+  _playerHealthUI: {fileID: 1429071162}
   _maxHealt: 3
 --- !u!4 &73220778
 Transform:
@@ -5893,7 +5894,7 @@ GameObject:
   - component: {fileID: 1313929028}
   - component: {fileID: 1313929023}
   - component: {fileID: 1313929024}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6033,6 +6034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 941b0f3a30441784c96ed4bff8cc4b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractionController
+  _visualTransform: {fileID: 8499714880125623276}
 --- !u!1 &1319718844
 GameObject:
   m_ObjectHideFlags: 0
