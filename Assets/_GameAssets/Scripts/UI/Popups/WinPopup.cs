@@ -1,4 +1,5 @@
 using System;
+using MaskTransitions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -21,11 +22,11 @@ public class WinPopup : MonoBehaviour
 
     private void OnMainMenuButtonClicked()
     {
-        Debug.Log("Main menu button clicked");
+        TransitionManager.Instance.LoadLevel(Consts.Scenes.MENU_SCENE);
     }
 
     private void OnNewGameButtonClicked()
     {
-        SceneManager.LoadScene(Consts.Scenes.GAME_SCENE);
+        TransitionManager.Instance.LoadLevel(Consts.Scenes.GAME_SCENE);
     }
 }
