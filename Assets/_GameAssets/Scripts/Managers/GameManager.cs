@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         if (!_isCatCatched)
         {
             _playerHealthUI.AnimateDamage(3);
-            StartCoroutine(OnGameOver());
+            StartCoroutine(OnGameOver(true));
             CameraShake.Instance.ShakeCamera(1.5f, 2f, 0.5f);
             _isCatCatched = true;      
         }
@@ -52,7 +52,8 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        ChangeGameState(GameState.Play);
+        ChangeGameState(GameState.CutScene);
+        BackgroundMusic.Instance.PlayBackgroundMusic(true);
     }
 
     public void OnEggCollected()
@@ -67,11 +68,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private IEnumerator OnGameOver()
+    private IEnumerator OnGameOver(bool isCatCatched = false)
     {
         yield return new WaitForSeconds(_loseDelay);
         ChangeGameState(GameState.GameOver);
         _winLoseUI.OnGameLose();
+
+        if (isCatCatched) {
+            AudioManager.Instance.Play(SoundType.CatSound);
+        }
     }
 
     public void ChangeGameState(GameState newState)

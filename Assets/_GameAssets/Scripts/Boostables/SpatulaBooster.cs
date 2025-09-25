@@ -12,7 +12,7 @@ public class SpatulaBooster : MonoBehaviour, IBoostable
 
     public void Boost(PlayerController playerController)
     {
-        if(_isActive) return;
+        if (_isActive) return;
         PlayBoostAnimation();
         Rigidbody playerRigidbody = playerController.GetRigidbody();
 
@@ -20,6 +20,7 @@ public class SpatulaBooster : MonoBehaviour, IBoostable
         playerRigidbody.AddForce(transform.forward * _jumpForce, ForceMode.Impulse);
         _isActive = true;
         Invoke(nameof(ResetBoostAnimation), 0.2f);
+        AudioManager.Instance.Play(SoundType.SpatulaSound);
     }
 
     private void PlayBoostAnimation()

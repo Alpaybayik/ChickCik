@@ -525,6 +525,7 @@ Transform:
   - {fileID: 622127014}
   - {fileID: 410087041}
   - {fileID: 832575519}
+  - {fileID: 1332669184}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &53461141
@@ -1619,7 +1620,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1402104, y: -0.6930664, z: 0.1402104, w: 0.6930664}
+  m_LocalRotation: {x: 0.14021038, y: -0.6930665, z: 0.1402104, w: 0.69306636}
   m_LocalPosition: {x: 31.28758, y: 3.356875, z: -2.9633293}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1984,6 +1985,7 @@ GameObject:
   - component: {fileID: 435819688}
   - component: {fileID: 435819687}
   - component: {fileID: 435819690}
+  - component: {fileID: 435819691}
   m_Layer: 5
   m_Name: SoundButton
   m_TagString: Untagged
@@ -2114,6 +2116,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &435819691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435819685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60264069f249a8945be0e54d8a5901f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverController
 --- !u!1 &491722299
 GameObject:
   m_ObjectHideFlags: 0
@@ -2585,6 +2599,7 @@ MonoBehaviour:
   _boosterSpeedTransform: {fileID: 1982519727}
   _boosterJumpTransform: {fileID: 780399806}
   _boosterSlowTransform: {fileID: 1600023447}
+  _playableDirector: {fileID: 1258542520}
   _goldBoosterWheatImage: {fileID: 1319718846}
   _holyBoosterWheatImage: {fileID: 524384993}
   _rottenBoosterWheatImage: {fileID: 1945541311}
@@ -2918,8 +2933,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
-    Enabled: 0
-    m_Value: 0
+    Enabled: 1
+    m_Value: 1
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -2964,7 +2979,7 @@ MonoBehaviour:
   PivotOffset: {x: 0, y: 0, z: 0}
   AmplitudeGain: 0
   FrequencyGain: 5
-  m_NoiseOffsets: {x: 0, y: 0, z: 0}
+  m_NoiseOffsets: {x: 281.76254, y: 641.11584, z: -255.4089}
 --- !u!114 &622127019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3248,6 +3263,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696653115}
   m_CullTransparentMesh: 1
+--- !u!1001 &701633795
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 832298751496657648, guid: 3b72b3591dad0cc4b9b1ac8137e59bbc, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779329214353778705, guid: 3b72b3591dad0cc4b9b1ac8137e59bbc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -30.92789
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779329214353778705, guid: 3b72b3591dad0cc4b9b1ac8137e59bbc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.91491
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779329214353778705, guid: 3b72b3591dad0cc4b9b1ac8137e59bbc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 85.43021
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779329214353778705, guid: 3b72b3591dad0cc4b9b1ac8137e59bbc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779329214353778705, guid: 3b72b3591dad0cc4b9b1ac8137e59bbc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779329214353778705, guid: 3b72b3591dad0cc4b9b1ac8137e59bbc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779329214353778705, guid: 3b72b3591dad0cc4b9b1ac8137e59bbc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779329214353778705, guid: 3b72b3591dad0cc4b9b1ac8137e59bbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779329214353778705, guid: 3b72b3591dad0cc4b9b1ac8137e59bbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779329214353778705, guid: 3b72b3591dad0cc4b9b1ac8137e59bbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3b72b3591dad0cc4b9b1ac8137e59bbc, type: 3}
 --- !u!1 &716605709
 GameObject:
   m_ObjectHideFlags: 0
@@ -3261,6 +3333,7 @@ GameObject:
   - component: {fileID: 716605712}
   - component: {fileID: 716605711}
   - component: {fileID: 716605714}
+  - component: {fileID: 716605715}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -3392,6 +3465,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &716605715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716605709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60264069f249a8945be0e54d8a5901f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverController
 --- !u!1001 &717397060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3622,6 +3707,7 @@ GameObject:
   - component: {fileID: 752650654}
   - component: {fileID: 752650653}
   - component: {fileID: 752650656}
+  - component: {fileID: 752650657}
   m_Layer: 5
   m_Name: NewGameButton
   m_TagString: Untagged
@@ -3753,6 +3839,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &752650657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752650651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60264069f249a8945be0e54d8a5901f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverController
 --- !u!1001 &755702903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4063,6 +4161,7 @@ GameObject:
   - component: {fileID: 796976978}
   - component: {fileID: 796976980}
   - component: {fileID: 796976981}
+  - component: {fileID: 796976982}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -4194,6 +4293,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &796976982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796976976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60264069f249a8945be0e54d8a5901f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverController
 --- !u!1 &797983401
 GameObject:
   m_ObjectHideFlags: 0
@@ -4967,6 +5078,7 @@ GameObject:
   - component: {fileID: 1056002616}
   - component: {fileID: 1056002615}
   - component: {fileID: 1056002618}
+  - component: {fileID: 1056002619}
   m_Layer: 5
   m_Name: TryAgainButton
   m_TagString: Untagged
@@ -5098,6 +5210,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1056002619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056002613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60264069f249a8945be0e54d8a5901f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverController
 --- !u!1 &1058346770
 GameObject:
   m_ObjectHideFlags: 0
@@ -5292,6 +5416,10 @@ MonoBehaviour:
   _soundButton: {fileID: 435819687}
   _resumeButton: {fileID: 1935457894}
   _mainMenuButton: {fileID: 796976980}
+  _musicActiveSprite: {fileID: 21300000, guid: 572d015c0604b0b49b09265a1072b1d4, type: 3}
+  _musicPassiveSprite: {fileID: 21300000, guid: 5f1b2ea972b168448b4c057a28eb7f2a, type: 3}
+  _soundActiveSprite: {fileID: 21300000, guid: b70c31f4b7494cf40ad2dfcb839120cf, type: 3}
+  _soundPassiveSprite: {fileID: 21300000, guid: 11231ee54f9eb5948b175a2a69b0d050, type: 3}
   _animationDuration: 0.3
 --- !u!1 &1072585666
 GameObject:
@@ -5626,6 +5754,7 @@ GameObject:
   - component: {fileID: 1144280491}
   - component: {fileID: 1144280490}
   - component: {fileID: 1144280493}
+  - component: {fileID: 1144280494}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -5756,6 +5885,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1144280494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144280488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60264069f249a8945be0e54d8a5901f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverController
 --- !u!1 &1144847893
 GameObject:
   m_ObjectHideFlags: 0
@@ -6003,6 +6144,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219849966}
   m_CullTransparentMesh: 1
+--- !u!1 &1258542519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1258542521}
+  - component: {fileID: 1258542520}
+  - component: {fileID: 1258542522}
+  m_Layer: 0
+  m_Name: TimelineManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &1258542520
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258542519}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: a8effd56245e30d49a567cf0df96857d, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 68828780894372039, guid: a8effd56245e30d49a567cf0df96857d, type: 2}
+    value: {fileID: 330585548}
+  m_ExposedReferences:
+    m_References:
+    - 02e78c39983cd3a48836988ce9ef3859: {fileID: 622127017}
+    - 662eafb4b442e014d887d71c55cff070: {fileID: 1332669183}
+--- !u!4 &1258542521
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258542519}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.16578, y: 0, z: 111.44017}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1258542522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258542519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2c5251ca06f834abff58466a16a3b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimelineManager
 --- !u!1001 &1290386136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6374,6 +6581,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9171099067155826051, guid: e8519312329e5c64b90e0f1c16524b05, type: 3}
   m_PrefabInstance: {fileID: 1331408131}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1332669182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1332669184}
+  - component: {fileID: 1332669183}
+  m_Layer: 0
+  m_Name: CutSceneCinemachineCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1332669183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332669182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
+  Priority:
+    Enabled: 1
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 0}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 60.000004
+    OrthographicSize: 5
+    NearClipPlane: 0.3
+    FarClipPlane: 1000
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
+--- !u!4 &1332669184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332669182}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.027657067, y: -0.9371424, z: 0.07637254, w: -0.33936194}
+  m_LocalPosition: {x: -26.61572, y: 7.2733083, z: 76.4086}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 52167539}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1338532109 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1989648313934100913, guid: c0b83b8a83732174999f17e9fc470610, type: 3}
@@ -6673,6 +6955,7 @@ GameObject:
   - component: {fileID: 1428672900}
   - component: {fileID: 1428672899}
   - component: {fileID: 1428672902}
+  - component: {fileID: 1428672903}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -6804,6 +7087,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1428672903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428672897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60264069f249a8945be0e54d8a5901f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverController
 --- !u!1 &1429071160
 GameObject:
   m_ObjectHideFlags: 0
@@ -6991,6 +7286,7 @@ GameObject:
   - component: {fileID: 1484991818}
   - component: {fileID: 1484991820}
   - component: {fileID: 1484991821}
+  - component: {fileID: 1484991822}
   m_Layer: 5
   m_Name: MusicButton
   m_TagString: Untagged
@@ -7121,6 +7417,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1484991822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484991816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60264069f249a8945be0e54d8a5901f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverController
 --- !u!1001 &1499788116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9898,6 +10206,7 @@ GameObject:
   - component: {fileID: 1935457895}
   - component: {fileID: 1935457894}
   - component: {fileID: 1935457897}
+  - component: {fileID: 1935457898}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -10029,6 +10338,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1935457898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935457892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60264069f249a8945be0e54d8a5901f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverController
 --- !u!1 &1945541309
 GameObject:
   m_ObjectHideFlags: 0
@@ -13650,8 +13971,10 @@ SceneRoots:
   - {fileID: 750984764}
   - {fileID: 527849260}
   - {fileID: 73220778}
+  - {fileID: 1258542521}
   - {fileID: 1765412817}
   - {fileID: 797983404}
+  - {fileID: 701633795}
   - {fileID: 632065555}
   - {fileID: 1313929022}
   - {fileID: 605233869}
